@@ -1,0 +1,1 @@
+const CLASS_NAMES = ["cat", "dog", "apple", "car", "tree", "house", "cup", "bicycle", "cloud", "fish", "flower", "star", "face", "moon", "pizza", "light bulb", "sun", "airplane", "candle", "umbrella"];

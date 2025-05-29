@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Sketch</title>
+
+    <!-- ✅ Link to your CSS -->
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="game-shell">
+      <div class="main-layout">
+
+        <!-- Robot Panel (LEFT) -->
+        <div class="robot-panel">
+          <img id="robot-image" src="/static/robot_idle.png" alt="AI Robot" />
+          <div id="robot-speech">Let's draw something cool!</div>
+        </div>
+
+        <!-- Game Panel (RIGHT) -->
+        <div class="game-container">
+          <h1>🎨 Guess the Sketch</h1>
+
+          <div class="prompt-box">
+            <p id="prompt-text">🎯 Click “Start Challenge” to get a sketch prompt!</p>
+            <button id="start-challenge-btn">🎮 Start Challenge</button>
+          </div>
+
+          <canvas id="sketchpad" width="280" height="280"></canvas>
+
+          <div id="game-ui">
+            <p class="prompt"><strong>Draw:</strong> <span id="draw-prompt">cat</span></p>
+            <div class="scoreboard">
+              <img src="/static/target.jpg" alt="Score Icon" style="height: 20px;">
+              <span id="score">Score: 0 / 0</span>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button id="clearBtn">🧹 Clear</button>
+            <button id="predictBtn">🤖 Predict</button>
+          </div>
+
+          <div class="toggle-box">
+            <button id="toggle-classes-btn">🎨 What can I draw?</button>
+            <ul id="class-list" class="hidden"></ul>
+          </div>
+
+          <div id="prediction" class="prediction"></div>
+        </div>
+      </div>
+        <div class="game-footer">
+            <p>👨‍💻 Developed by Eric Ramirez, AI Engineer</p>
+            <p>© 2025 Guess the Sketch — Powered by TensorFlow & Flask</p>
+        </div>
+    </div>
+
+  <div id="celebration" class="hidden">🎉🎉🎉 Correct! 🎉🎉🎉</div>
+  <footer><p>Built with AI + TensorFlow + Flask</p></footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
