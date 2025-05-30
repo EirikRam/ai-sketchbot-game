@@ -3,9 +3,10 @@ import numpy as np
 from PIL import Image
 import os
 
-MODEL_PATH = 'backend/model/sketch_model.keras'
-CLASS_NAMES_PATH = 'backend/model/class_names.txt'
-IMAGE_PATH = 'backend/data/apple.png'
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+MODEL_PATH = os.path.join(PROJECT_ROOT, 'backend', 'model', 'sketch_model_v3.keras')
+CLASS_NAMES_PATH = os.path.join(PROJECT_ROOT, 'backend', 'model', 'class_names_v3.txt')
+IMAGE_PATH = os.path.join(PROJECT_ROOT, 'backend', 'data', 'tree.jpg')
 
 # Load model
 model = tf.keras.models.load_model(MODEL_PATH)

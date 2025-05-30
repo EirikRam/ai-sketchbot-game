@@ -61,6 +61,23 @@ h1 {
     text-shadow: 2px 2px 4px #000;
 }
 
+.prompt-box {
+  min-height: 100px; /* or however much space you want to reserve */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#prompt-text {
+  display: block;
+  min-height: 2em;  /* Adjust as needed */
+  line-height: 1.5em;
+  margin: 0 auto;
+  color: #333; /* Make sure it’s visible */
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -169,16 +186,21 @@ button:hover {
 .prompt-box {
     margin-bottom: 20px;
     padding: 10px;
-    background: #f3f3f3;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
+    background: rgba(0, 0, 0, 0.3); /* transparent dark background */
+    box-shadow: 0 0 12px rgba(0, 255, 247, 0.2);
+    backdrop-filter: blur(5px); /* adds a frosted glass effect */
+    border: 1px solid rgba(0, 255, 247, 0.2);
 }
 
+#instructions,
 #prompt-text {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #00fff7; /* neon cyan */
+    text-shadow: 1px 1px 2px #000; /* better visibility */
+    margin: 6px 0;
 }
 
 #start-challenge-btn {
@@ -201,11 +223,11 @@ button:hover {
   color: #ffeaa7;
 }
 
-.scoreboard {
-  margin-top: 0.5em;
-  font-size: 1em;
-  color: #dfe6e9;
-}
+/*.scoreboard {*/
+/*  margin-top: 0.5em;*/
+/*  font-size: 1em;*/
+/*  color: #dfe6e9;*/
+/*}*/
 
 #celebration {
     position: absolute;
@@ -225,10 +247,6 @@ button:hover {
 @keyframes pop-in {
     0% { transform: scale(0.5) translate(-50%, -50%); opacity: 0; }
     100% { transform: scale(1) translate(-50%, -50%); opacity: 1; }
-}
-
-.hidden {
-    display: none;
 }
 
 /* Left Side: Robot */
@@ -263,6 +281,43 @@ button:hover {
     box-shadow: 0 0 8px rgba(0, 247, 255, 0.5);
     text-align: center;
 }
+
+/* === Robot Animations === */
+.robot-bounce {
+  animation: bounce 0.6s ease;
+}
+
+.robot-shake {
+  animation: shake 0.6s ease;
+}
+
+.robot-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-15px); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+
+/* ====================== */
+/* 🎮 GAME BOARD STYLES   */
+/* ====================== */
+
 
 /* Right Side: Game UI */
 .game-container {
@@ -353,3 +408,15 @@ button:hover {
 .game-shell {
   animation: pulse-glow 3s ease-in-out infinite;
 }
+
+#scoreboard {
+  background-color: #081530;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 0 10px #0ff;
+}
+

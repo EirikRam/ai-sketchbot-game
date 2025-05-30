@@ -21,7 +21,8 @@ def predict_route():
         return jsonify({'error': 'Missing image data'}), 400
     try:
         results = predict(data['image'])
-        return jsonify({'predictions': results})
+        #return jsonify({'predictions': results})
+        return jsonify(results)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 

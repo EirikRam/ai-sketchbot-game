@@ -26,19 +26,17 @@
           <h1>🎨 Guess the Sketch</h1>
 
           <div class="prompt-box">
-            <p id="prompt-text">🎯 Click “Start Challenge” to get a sketch prompt!</p>
+            <p id="instructions">🎯 Click “Start Challenge” to get a sketch prompt!</p>
+            <p id="prompt-text" class="hidden"></p>
             <button id="start-challenge-btn">🎮 Start Challenge</button>
           </div>
 
-          <canvas id="sketchpad" width="280" height="280"></canvas>
+            <canvas id="sketchpad" width="280" height="280"></canvas>
 
-          <div id="game-ui">
-            <p class="prompt"><strong>Draw:</strong> <span id="draw-prompt">cat</span></p>
-            <div class="scoreboard">
-              <img src="/static/target.jpg" alt="Score Icon" style="height: 20px;">
-              <span id="score">Score: 0 / 0</span>
+            <div id="scoreboard">
+                <p><strong>Score:</strong> <span id="scoreValue">0</span></p>
+                <p><strong>Strikes:</strong> <span id="strikesValue">0</span></p>
             </div>
-          </div>
 
           <div class="button-group">
             <button id="clearBtn">🧹 Clear</button>
@@ -62,6 +60,8 @@
   <div id="celebration" class="hidden">🎉🎉🎉 Correct! 🎉🎉🎉</div>
   <footer><p>Built with AI + TensorFlow + Flask</p></footer>
 
+  <script src="/static/class_names.js"></script>
   <script src="/static/script.js"></script>
+<!--  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>-->
 </body>
 </html>

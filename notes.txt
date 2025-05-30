@@ -1,0 +1,89 @@
+Absolutely — thank you for the clarification. I now clearly understand your new game vision, and I’ll summarize everything in detail below to ensure we're 100% aligned.
+
+---
+
+## ✅ NEW GAME VISION: **"Team Up with the Robot" (Co-op Pictionary with AI)**
+
+---
+
+### 🎯 **Objective**
+
+You are **not competing** against the AI — you are **on the same team**.
+
+* You draw.
+* The AI (robot) guesses what you drew.
+* If the AI guesses right: 🟢 **Point for the team**.
+* If the AI guesses wrong: 🔴 **Strike against the team**.
+* 3 strikes = ❌ **Game Over**.
+* The goal is to **build the longest streak** (highest score) without hitting 3 wrong guesses.
+
+---
+
+### 🧩 **Game Flow / Rules**
+
+| Step              | Description                                                      |
+| ----------------- | ---------------------------------------------------------------- |
+| 1. 🧠 Prompt      | You’re shown a prompt (e.g., “Draw a bicycle”).                  |
+| 2. 🎨 Draw        | You draw on the canvas.                                          |
+| 3. 🤖 AI Guesses  | The AI tries to guess what the drawing is.                       |
+| 4. ✅ If Correct   | Score goes up by 1. Robot reacts positively. Move to next round. |
+| 5. ❌ If Incorrect | Add a strike. Robot reacts sadly. If 3 strikes → Game Over.      |
+| 6. 🏆 End Game    | When game ends, user enters a nickname to save their score.      |
+| 7. 🏅 High Scores | Optionally view leaderboard of top streaks.                      |
+
+---
+
+### 📊 **Game Stats Tracked**
+
+* `score` → Total number of correct AI guesses.
+* `strikes` → How many incorrect guesses (0–3).
+* `highScores[]` → Local/remote storage of nickname + score.
+
+---
+
+### 🧠 **Key UX Components**
+
+| Feature                 | Description                                                    |
+| ----------------------- | -------------------------------------------------------------- |
+| 🎯 Prompt UI            | Clearly shows what to draw.                                    |
+| ✍️ Canvas               | Drawing area (notepad-themed).                                 |
+| 🧠 AI Guess Display     | Shows the AI’s top guess.                                      |
+| 🟢 Point/Strike Display | Shows score and how many strikes you have (like hearts or Xs). |
+| 🤖 Robot Reaction UI    | Shows robot reacting to win/loss.                              |
+| 🧾 End Game Modal       | Prompt for nickname and shows final score.                     |
+| 🏆 High Score Board     | (Optional) Ranks saved scores.                                 |
+
+---
+
+### 🔧 Implementation Tasks
+
+1. [ ] **Game Mode Rewrite**: Switch from player vs AI to team play logic.
+2. [ ] **Score + Strike Counter**: Add UI + variables for team score and strikes.
+3. [ ] **Win/Lose Round Logic**: Update logic so robot’s guess determines point or strike.
+4. [ ] **Game Over Condition**: Trigger modal on 3 strikes.
+5. [ ] **Nickname + Score Save**: Create UI + logic to enter/save score.
+6. [ ] **Optional Leaderboard**: Store/display past scores.
+7. [ ] **Robot Reactions**: Show happy or sad based on AI success.
+8. [ ] **Visual Feedback**: Display heart icons (lives) and score visibly.
+
+---
+
+### 🧠 Example UI Messages
+
+* "Prompt: Draw a **bicycle**. Help the robot guess!"
+* AI guessed: **Bicycle** ✅ → “Great job! You and the robot earned a point!”
+* AI guessed: **Toothbrush** ❌ → “Oops! That’s a strike. Try again!”
+* “You’ve got 2 strikes. One more and it’s game over!”
+* Final message: “Game Over – Your score: 7. Enter your name to save it!”
+
+---
+
+### ✅ Confirm Before We Build
+
+Let me know if this breakdown is:
+
+* ✅ Exactly what you had in mind
+* 🛠️ Needs adjustments
+* 🔁 Should include/exclude anything
+
+Once confirmed, we’ll move forward **step by step**, starting with the core logic changes (score, strikes, and updated AI guessing feedback).

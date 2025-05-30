@@ -8,6 +8,7 @@ os.makedirs(PLOT_DIR, exist_ok=True)
 
 def load_histories():
     histories = {}
+    print("Files in directory:", os.listdir(HISTORY_DIR))  # 🔍 ADD THIS LINE
     for file in os.listdir(HISTORY_DIR):
         if file.endswith('.json'):
             path = os.path.join(HISTORY_DIR, file)
@@ -52,7 +53,7 @@ if __name__ == '__main__':
         print("No training histories found.")
     else:
         plot_history(histories)
-
+        print("Histories loaded:", histories.keys())
         # Plot combined val_accuracy for all runs
         plt.figure()
         for filename, history in histories.items():
