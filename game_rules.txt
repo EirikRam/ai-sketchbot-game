@@ -1,0 +1,42 @@
+🎮 GUESS THE SKETCH – GAME RULES 🎨
+
+🧠 OBJECTIVE:
+Draw the object shown in the sketch prompt and see if the AI can guess it correctly. It's you vs. the AI — how well can you sketch, and how smart is the AI?
+
+📜 HOW TO PLAY:
+1. Click the green "Start Challenge" button.
+2. A new prompt will appear (e.g., “🎯 Draw: airplane”).
+3. Use your mouse to draw the object on the canvas.
+4. Click the "🤖 Predict" button once you’re done.
+5. The AI will analyze your sketch and try to guess it.
+6. You gain 1️⃣ point for each correct guess.
+7. 3 incorrect guesses = ❌ Game Over!
+
+🔄 CONTROLS:
+- 🎮 Start Challenge – Get a new drawing prompt.
+- 🧹 Clear – Erase the canvas and try again.
+- 🤖 Predict – Let the AI make its guess.
+- 🎨 What can I draw? – Toggle to view the full list of recognizable classes.
+
+⚠️ STRIKES:
+- Each incorrect prediction counts as a ❌ strike.
+- After 3 strikes, the game ends and your score is saved (optionally).
+
+🌟 ROBOT MOODS:
+- 😄 Robot Happy – You drew it well and it guessed correctly!
+- 😢 Robot Sad – Your drawing tricked the AI.
+- 😐 Robot Idle – Waiting for your next sketch.
+
+🏆 SCORING:
++1 point per correct guess.
+0 points for incorrect guesses.
+Reach the highest streak you can before 3 strikes!
+
+💡 TIPS FOR SUCCESS:
+- Keep your drawings simple and recognizable.
+- Use clear outlines and avoid excessive scribbles.
+- Center your sketch on the canvas.
+- Be creative, but remember this is AI — not Picasso!
+
+Enjoy the game and see if your sketches can outsmart AI! 🤝
+

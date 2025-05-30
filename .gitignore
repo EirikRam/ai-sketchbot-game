@@ -1,3 +1,4 @@
 # Ignore model data
 backend/data/
+backend/model_versions/
 
